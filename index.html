@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación 2: Componentes Bootstrap</title>
+    <link rel="stylesheet" href="assets/scss/proyecto.css">
+</head>
+<body class="container">
+
+    <br><h2>Evaluación Parte n°2</h2>
+    <p>Ingresa un contenido que quieras reflejar.</p>
+    <form class="d-flex justify-content-around">
+
+        <div>
+            <label for="titulo">Título</label><br>
+            <input type="text" id="titulo">
+        </div>
+
+        <div>
+            <label for="descripcion">Descripción</label><br>
+            <input type="text" id="descripcion">
+        </div>
+
+        <button onclick="" class="btn btn-danger" id="cambiarBtn">CAMBIAR</button>
+
+    </form>
+
+    <br>
+    <h2>Componentes Bootstrap</h2>
+    <p>Prueba de alerts, popover, toast y offcanvas. Modificar contenido de todos los componentes enunciados con atributos data.</p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="mx-auto">
+                <div class="row d-flex justify-content-center">
+
+                    <!-- Alert Box -->
+                    <div class="col-md-6 caja" id="liveAlertPlaceholder">                        
+                        <button class="btn btn-danger" id="liveAlertBtn" type="button" data-bs-message="alert default">Alert</button>                        
+                    </div>
+
+                    <!-- Popover Box -->
+                    <div class="col-md-6 caja">                        
+                        <button class="btn btn-danger" id="popover" type="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="popover default">Popover</button>                        
+                    </div>
+
+                </div>
+
+
+                <div class="row d-flex justify-content-center">
+
+                    <!-- Toast Box -->
+                    <div class="col-md-6 caja">   
+
+                        <button type="button" class="btn btn-danger" id="toast-button" data-bs-message="toast default">Toast</button>
+
+                        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                            <div class="toast">
+                                <div class="toast-header">
+                                    <strong class="me-auto">Nuevo Mensaje</strong>
+                                    <small>Hace 7 min atras</small>
+                                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="close"></button>
+                                </div>
+                                <div class="toast-body">
+                                    Hola soy un Toast
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offcanvas Box -->
+                    <div class="col-md-6 caja">
+                        <a class="btn btn-danger" data-bs-toggle="offcanvas" href="#offcanvas1">Offcanvas</a> 
+
+                        <div class="offcanvas offcanvas-start" tabindex="1" id="offcanvas1">
+
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title">Iniciar Sesion</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" name="button"></button>
+                            </div>
+
+                            <div class="offcanvas-body">
+
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="nombre" class="form-label">Ingrese su nombre</label>
+                                        <input type="text" class="form-control" id="nombre" name="nombre">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="clave" class="form-label">Ingrese su clave</label>
+                                        <input type="password" class="form-control" id="clave" name="clave">
+                                    </div>
+                                    <button type="submit" class="btn btn-danger">Confirmar</button>
+                                </form>
+
+                            </div>
+
+                        </div>                      
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
